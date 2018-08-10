@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>控制台</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+</head>
+<body>
+    <div class="layui-row layui-col-space15">
+        <!--快捷入口开始-->
+        <div class="layui-col-md12">
+            <div class="layui-card">
+
+                <div class="layui-card-body">
+                    <!--Kindeditor富文本编辑器-->
+                    <div class="layui-form-item" id="carddjs">
+                        <label class="layui-form-label">商品介绍</label>
+                        <textarea id="content1" name="content1" cols="100" rows="8" style="width: 99%; height: 500px;visibility:hidden;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!--快捷入口结束-->
+
+        </div>
+
+    </div>
+
+    <script src="/static/layui/layui.js"></script>
+   
+    <script src="../Scripts/kindeditor/kindeditor-all-min.js"></script>
+    <script src="../Scripts/kindeditor/lang/zh-CN.js"></script>
+    <script>
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('#content1', {
+                width: '700px',
+                heigth: '450px',
+                uploadJson: '/Admin/Kindeditor/UploadImage',
+                fileManagerJson: '/Admin/Kindeditor/ProcessRequest',
+                urlType: 'domain',
+                allowFileManager: true,
+
+                afterCreate : function() {
+                    this.sync()
+                }
+            });
+
+        });
+    </script>
+   
+</body>
+</html>

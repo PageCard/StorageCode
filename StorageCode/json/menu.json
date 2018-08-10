@@ -1,0 +1,33 @@
+[
+  [
+    {
+      "title": "系统设置",
+      "value": "10001",
+      "data": [
+        {
+          "title": "密码设置",
+          "href": null
+        }
+      ]
+    },
+    {
+      "title": "会员管理",
+      "value": "10003",
+      "data": [
+        {
+          "title": "会员列表",
+          "href": null
+        },
+        {
+          "title": "注册会员",
+          "href": null
+        },
+        {
+          "title": "原始会员",
+          "href": null
+        }
+      ]
+    }
+  ]
+]
+
